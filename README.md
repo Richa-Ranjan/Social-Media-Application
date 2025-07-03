@@ -1,71 +1,106 @@
-# 🤖 Social Media Application (Bot) using Node.js
+# 🤖 Social Media Bot (Twitter/X) using Node.js
 
 ## 📌 Project Overview
 
-This project is a server-side **Social Media Bot Application** built with **Node.js**. It integrates with various **social media APIs** to perform automated tasks like scheduled posting, automated likes/comments, and data scraping for analysis. The bot helps manage social media efficiently and provides a base for scalable automation.
+This project is a simple and secure **Twitter Bot Application** built using **Node.js**. It integrates with the **Twitter (X) API** to post tweets automatically using API keys stored securely in a `.env` file. The structure follows a clean MVC pattern, making it easy to extend for additional platforms or features like scheduled posts or data scraping.
 
 ---
 
 ## 🚀 Features
 
-- ✅ **Scheduled Posting** – Automatically post content at predefined times.
-- ✅ **Auto Engagement** – Like or comment on posts based on keywords, hashtags, or filters.
-- ✅ **Data Scraping** – Extract user data or post data for analysis.
-- ✅ **API Integration** – Supports platforms like Twitter (X), Instagram, and Facebook via their APIs.
-- ✅ **Asynchronous Processing** – Uses async requests for efficiency and speed.
-- ✅ **Extensible & Modular Design** – Easy to scale or plug in new platforms.
+- ✅ **Post Tweets Automatically**  
+- ✅ **Secure API Key Handling via `.env`**  
+- ✅ **Clean and Modular Project Structure**  
+- ✅ **Ready for Extension to More Features or Platforms**
 
 ---
 
 ## 🛠️ Tech Stack
 
-- **Backend**: Node.js, Express.js
-- **Scheduler**: node-cron
-- **API Requests**: Axios
-- **Environment Config**: dotenv
-- **Database** (optional): MongoDB with Mongoose or MySQL
-- **Authentication**: OAuth 2.0 or API Token-based auth
-- **Others**: Winston (logging), Morgan (HTTP logging)
+| Layer           | Technology                                     |
+|------------------|-------------------------------------------------|
+| Runtime          | Node.js                                        |
+| Web Framework    | Express.js                                     |
+| Twitter API      | [twitter-api-v2](https://www.npmjs.com/package/twitter-api-v2) |
+| Env Config       | dotenv                                          |
+| Version Control  | Git & GitHub                                    |
 
 ---
 
 ## 📁 Folder Structure
 
-```bash
-social-media-app/
-│
+socialmedia_proj/
 ├── controllers/
-│   └── postController.js
-│   └── likeCommentController.js
-│
+│ └── socialController.js
+├── routes/
+│ └── social.js
 ├── services/
-│   └── twitterApi.js
-│   └── facebookApi.js
-│
-├── scheduler/
-│   └── jobScheduler.js
-│
-├── .env
-├── app.js
+│ └── socialApi.js
+├── tweet.js
+├── server.js
+├── .env.example
+├── .gitignore
 ├── package.json
-├── README.md
+└── README.md
 
+---
 
-📈 Future Enhancements
-Dashboard for manual post control and analytics view
+## 🔐 Environment Configuration
 
-Sentiment analysis on comments
+Create a `.env` file in your root directory and store your actual credentials:
 
-Integration with more platforms (LinkedIn, Reddit)
+```env
+PORT=3000
+TWITTER_API_KEY=your_api_key_here
+TWITTER_API_SECRET=your_api_secret_here
+TWITTER_BEARER_TOKEN=your_bearer_token_here
+TWITTER_ACCESS_TOKEN=your_access_token_here
+TWITTER_ACCESS_SECRET=your_access_secret_here
+✅ Add .env to .gitignore to keep it safe.
+✅ Use .env.example to share the structure without exposing secrets.
 
-Real-time notifications
+▶️ How to Run
+Install dependencies
 
-🤝 Contributing
-Pull requests are welcome! Please fork the repo and submit a PR with clear commits.
+bash:
+npm install
+Run the bot
+
+bash:
+node tweet.js
+Check your post on Twitter/X
+→ https://x.com/richa_dev_bot
+
+💡 Future Enhancements
+⏰ Scheduled Tweet Posting
+
+❤️ Auto-like and comment functionality
+
+📊 Dashboard for analytics
+
+📸 Instagram or Facebook API integration
+
+🧠 Sentiment Analysis on replies
+
+🙋‍♀️ Author
+Richa Ranjan
+B.Tech – Computer Science & Business Systems
+Asansol Engineering College (2022–2026)
+🔗 GitHub Profile
 
 📄 License
-This project is open source and available under the MIT License.
+This project is licensed under the MIT License.
+Feel free to use, modify, and contribute!
 
-🙋‍♀️ Maintainer
-Richa Ranjan
-GitHub | LinkedIn
+
+
+---
+
+### ✅ Next Step:
+
+1. Paste this into your `README.md` on GitHub or locally in VS Code.
+2. Commit & Push:
+   ```bash
+   git add README.md
+   git commit -m "Updated README with final project details"
+   git push
