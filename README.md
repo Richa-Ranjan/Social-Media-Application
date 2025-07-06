@@ -93,14 +93,3 @@ This project is licensed under the MIT License.
 Feel free to use, modify, and contribute!
 
 
-
----
-
-### ✅ Next Step:
-
-1. Paste this into your `README.md` on GitHub or locally in VS Code.
-2. Commit & Push:
-   ```bash
-   git add README.md
-   git commit -m "Updated README with final project details"
-   git push
